@@ -23,7 +23,7 @@
         <input id="inputTitle" type="text" placeholder="Title">
         <input id="inputAnnualSalary" type="text" placeholder="Annual Salary">
     </div>
-    <button type="button">Submit</button>
+    <button type="button" id="submit">Submit</button>
     <h3>Employees</h3>
     <table>
         <thead>
@@ -43,7 +43,7 @@
                 <td>4521</td>
                 <td>Team Lead</td>
                 <td>$80,000</td>
-                <td><button type="button" class="deleteButton">Delete</button></td>
+                <td class="button-container"><button type="button" class="deleteButton">Delete</button></td>
             </tr>
             <tr>
                 <td>Maurice</td>
@@ -51,7 +51,7 @@
                 <td>8724</td>
                 <td>Support Team</td>
                 <td>$58,000</td>
-                <td><button type="button" class="deleteButton">Delete</button></td>
+                <td class="button-container"><button type="button" class="deleteButton">Delete</button></td>
             </tr>
             <tr>
                 <td>Roy</td>
@@ -59,11 +59,19 @@
                 <td>9623</td>
                 <td>Quality Assurance</td>
                 <td>$48,000</td>
-                <td><button type="button" class="deleteButton">Delete</button></td>
+                <td class="button-container"><button type="button" class="deleteButton">Delete</button></td>
             </tr>
         </tbody>
+        <tfoot>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tfoot>
     </table>
-    <h3>Total Monthly: $15,500.00</h3>
+    <h3 id="totalMonthly">Total Monthly: $15,500.00</h3>
 </body>
 
 </html>
