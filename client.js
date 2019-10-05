@@ -37,7 +37,7 @@ function appendToTable (object) {
     <tr>
     <td>${object.firstName}</td>
     <td>${object.lastName}</td>
-    <td>${object.id}</td>
+    <td class="id">${object.id}</td>
     <td>${object.title}</td>
     <td class="salary">$${object.annualSalary}</td>
     <td class="button-container"><button type="button" class="deleteButton">Delete</button></td>
@@ -53,6 +53,21 @@ function calculateMonthlyCosts (array) {
     $("#totalMonthly").text(`Total Monthly:$${Math.round(totalMonthlyCosts/12)}`);
 }
 
+// removes row from table
 function removeFromTable () {
+    let id = $(this).parent().siblings(".id").text();
+    console.log(id);
+    $(this).closest('tr').remove();
+    removeEmployeeFromArray(id);
+    calculateMonthlyCosts(employees);
+}
 
+// removes employee from employees array
+function removeEmployeeFromArray(indicator) {
+    for (i in employees) {
+        if (indicator === employees[i].id) {
+            employees.splice(i,1);
+        }
+    }
+    console.log(employees);
 }
