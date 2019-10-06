@@ -62,7 +62,7 @@ function appendToTable (object) {
     <td>${object.lastName}</td>
     <td class="id">${object.id}</td>
     <td>${object.title}</td>
-    <td class="salary">$${object.annualSalary}</td>
+    <td class="salary">${accounting.formatMoney(object.annualSalary)}</td>
     <td class="button-container"><button type="button" class="deleteButton">Delete</button></td>
     </tr>`)
 }
@@ -73,9 +73,11 @@ function calculateMonthlyCosts (array) {
     for (object of array) {
         totalMonthlyCosts += Number(object.annualSalary)/12;
     }
-    $("#totalMonthly").text(`Total Monthly:$${Math.round(totalMonthlyCosts)}`);
+    $("#totalMonthly").text(`Total Monthly: ${accounting.formatMoney(Math.round(totalMonthlyCosts))}`);
     if (totalMonthlyCosts >= 20000) {
         $("#totalMonthly").css("background", "red");
+    } else {
+        $("#totalMonthly").css("background", "white");
     }
 }
 
