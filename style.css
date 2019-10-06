@@ -11,10 +11,14 @@
     margin: 10px;
 }
 
-#submit {
-    float: right;
+#submit-container {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#submitButton {
     margin: 5px 2%;
-    width: 15%;
+    width: 10%;
 }
 
 button {

@@ -28,3 +28,12 @@ _jQuery_
 If you have any questions, feel free to email me at [bakerpj1992@gmail.com](www.google.com)
 
 ---
+
+## Yet To Do
+
+1. Change font style of headers to be thinner
+2. add a better color scheme
+3. possibly add a transparent background image like a money sign
+4. Require all full input fields
+5. Forbit the use of symbols in any input box
+6. require id and salary inputs to be numbers
