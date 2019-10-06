@@ -1,8 +1,31 @@
 $(document).ready(readyNow);
 
-let employees = [];
+let employees = [
+    {
+        firstName: "Jen",
+        lastName: "Barber",
+        id: 4521,
+        title: "Team Lead",
+        annualSalary: 80000
+    },
+    {
+        firstName: "Maurice",
+        lastName: "Moss",
+        id: 8724,
+        title: "Support Team",
+        annualSalary: 58000
+    },
+    {
+        firstName: "Roy",
+        lastName: "Smith",
+        id: 9623,
+        title: "Quality Assurance",
+        annualSalary: 48000
+    }
+];
 
 function readyNow () {
+calculateMonthlyCosts(employees);
 $("#submitButton").on("click", addEmployee);
 $("tbody").on("click", ".deleteButton", removeFromTable)
 }
@@ -12,9 +35,9 @@ function addEmployee () {
     let employee = {
         firstName: $("#inputFirstName").val(),
         lastName: $("#inputLastName").val(),
-        id: $("#inputID").val(),
+        id: Number($("#inputID").val()),
         title: $("#inputTitle").val(),
-        annualSalary: $("#inputAnnualSalary").val()
+        annualSalary: Number($("#inputAnnualSalary").val())
     }
     employees.push(employee);
     emptyFields();
@@ -48,14 +71,17 @@ function appendToTable (object) {
 function calculateMonthlyCosts (array) {
     let totalMonthlyCosts = 0;
     for (object of array) {
-        totalMonthlyCosts += object.annualSalary;
+        totalMonthlyCosts += Number(object.annualSalary)/12;
     }
-    $("#totalMonthly").text(`Total Monthly:$${Math.round(totalMonthlyCosts/12)}`);
+    $("#totalMonthly").text(`Total Monthly:$${Math.round(totalMonthlyCosts)}`);
+    if (totalMonthlyCosts >= 20000) {
+        $("#totalMonthly").css("background", "red");
+    }
 }
 
 // removes row from table
 function removeFromTable () {
-    let id = $(this).parent().siblings(".id").text();
+    let id = Number($(this).parent().siblings(".id").text());
     console.log(id);
     $(this).closest('tr').remove();
     removeEmployeeFromArray(id);
