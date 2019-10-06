@@ -1,8 +1,16 @@
+body {
+    font-family: Palatino, Geneva, Helvetica, sans-serif;
+}
+
 #header {
-    background-color: gray;
+    background-color: #5053ff;
     color: white;
     text-align: center;
     padding: 25px;
+}
+
+h3 {
+    color: #5053ff
 }
 
 #input-field {
@@ -23,7 +31,7 @@
 
 button {
     border-radius: 5px;
-    background-color: whitesmoke;
+    background-color: #7779e8;
 }
 
 .button-container {
@@ -49,7 +57,7 @@ th, td {
 }
 
 th {
-    background-color: lightgray;
+    background-color: #7779e8;
 }
 
 tfoot td {

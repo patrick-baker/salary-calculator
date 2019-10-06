@@ -31,7 +31,7 @@ If you have any questions, feel free to email me at [bakerpj1992@gmail.com](www.
 
 ## Yet To Do
 
-1. Change font style of headers to be thinner
+[x] 1. Change font style of headers to be thinner
 2. add a better color scheme
 3. possibly add a transparent background image like a money sign
 4. Require all full input fields
