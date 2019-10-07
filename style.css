@@ -2,6 +2,27 @@ body {
     font-family: Palatino, Geneva, Helvetica, sans-serif;
 }
 
+#bg {
+    position: fixed;
+    width: 100%; 
+    height: 100%;
+    opacity: .03;
+    z-index: -1;
+}
+
+#bg img {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    margin: auto; 
+    min-width: 50%;
+    min-height: 50%; 
+    max-width: 75%;
+    max-height: 75%;
+}
+
 #header {
     background-color: #5053ff;
     color: white;
@@ -72,4 +93,9 @@ tfoot {
 
 #totalMonthly {
     text-align: right;
+}
+
+#totalMonthly-container {
+    display:flex;
+    flex-direction: row-reverse;
 }
