@@ -34,6 +34,9 @@ If you have any questions, feel free to email me at [bakerpj1992@gmail.com](www.
 [x] 1. Change font style of headers to be thinner
 [x] 2. add a better color scheme
 [x] 3. possibly add a transparent background image like a money sign
-4. Require all full input fields
-5. Forbit the use of symbols in any input box
-6. require id and salary inputs to be numbers
+[x] 4. Require all full input fields
+[x] 5. Forbid the use of symbols in any input box
+[x] 6. require id and salary inputs to be numbers
+    7. create more interesting animations on employee addition using jquery
+    8. add more color to page
+    9. 
