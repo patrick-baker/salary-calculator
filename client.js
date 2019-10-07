@@ -39,6 +39,18 @@ function addEmployee () {
         title: $("#inputTitle").val(),
         annualSalary: Number($("#inputAnnualSalary").val())
     }
+    // requires employee.id and employee.annualSalary to be strictly digits
+    if (!/\d/.test(employee.id) || !/\d/.test(employee.annualSalary)) {
+        return (alert("Please use only digits for ID and salary."));
+    }
+    // requires employee.firstName, employee.lastName and employee.title to use only digits and letts.
+    if (/\W/.test(employee.firstName) || /\W/.test(employee.lastName) || /\W/.test(employee.title)) {
+        return (alert("Please use only letters or digits for employee's name and title."));
+    }
+    // requires all input fields to have values
+    if (!employee.firstName || !employee.lastName || !employee.id || !employee.title || !employee.annualSalary) {
+        return (alert("Please fill all input fields."));
+    }
     employees.push(employee);
     emptyFields();
     appendToTable(employee);

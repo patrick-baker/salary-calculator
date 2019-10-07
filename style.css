@@ -34,7 +34,7 @@ h3 {
     color: #5053ff
 }
 
-#input-field {
+.flex-field {
     display: flex;
     justify-content: space-around;
     margin: 10px;
@@ -59,7 +59,7 @@ button {
     text-align: center;
 }
 
-input {
+input, .flex-field h4 {
     width: 17%;
 }
 
