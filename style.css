@@ -31,7 +31,7 @@ body {
 }
 
 h3 {
-    color: #5053ff
+    color: #5053ff;
 }
 
 .flex-field {
@@ -93,6 +93,7 @@ tfoot {
 
 #totalMonthly {
     text-align: right;
+    border-radius: 3px;
 }
 
 #totalMonthly-container {

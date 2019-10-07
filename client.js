@@ -28,7 +28,7 @@ function readyNow () {
 calculateMonthlyCosts(employees);
 $("#submitButton").on("click", addEmployee);
 $("tbody").on("click", ".deleteButton", removeFromTable)
-$("input").on("change", correctInputFields);
+$("input").on("change", correctInputFields); // NOT YET WORKING
 }
 
 // creates employee object from input fields, pushes to employee array
@@ -57,8 +57,8 @@ function addEmployee () {
     appendToTable(employee);
     calculateMonthlyCosts(employees);
 }
-
-function correctInputFields () { //need to finish this function with border colors
+// NOT YET WORKING
+function correctInputFields () { //need to finish this function with border colors, make submit button inactive
     let employee = {
         firstName: $("#inputFirstName").val(),
         lastName: $("#inputLastName").val(),
@@ -111,8 +111,11 @@ function calculateMonthlyCosts (array) {
     $("#totalMonthly").text(`Total Monthly: ${accounting.formatMoney(Math.round(totalMonthlyCosts))}`);
     if (totalMonthlyCosts >= 20000) {
         $("#totalMonthly").css("background", "red");
+        $("#totalMonthly").css("color", "white");
+
     } else {
         $("#totalMonthly").css("background", "white");
+        $("#totalMonthly").css("color", "#5053ff");
     }
 }
 
