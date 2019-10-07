@@ -28,6 +28,7 @@ function readyNow () {
 calculateMonthlyCosts(employees);
 $("#submitButton").on("click", addEmployee);
 $("tbody").on("click", ".deleteButton", removeFromTable)
+$("input").on("change", correctInputFields);
 }
 
 // creates employee object from input fields, pushes to employee array
@@ -57,6 +58,25 @@ function addEmployee () {
     calculateMonthlyCosts(employees);
 }
 
+function correctInputFields () { //need to finish this function with border colors
+    let employee = {
+        firstName: $("#inputFirstName").val(),
+        lastName: $("#inputLastName").val(),
+        id: $("#inputID").val(),
+        title: $("#inputTitle").val(),
+        annualSalary: ("#inputAnnualSalary").val()
+    }
+    // requires employee.id and employee.annualSalary to be strictly digits
+    if (!/\d/.test(employee.id) || !/\d/.test(employee.annualSalary)) {
+        $(this).css("border-color", "red");
+    }
+    // requires employee.firstName, employee.lastName and employee.title to use only digits and letts.
+    if (/\W/.test(employee.firstName) || /\W/.test(employee.lastName) || /\W/.test(employee.title)) {
+        $(this).css("border-color", "red");
+    }
+
+}
+
 // empties input fields
 function emptyFields() {
     $("#inputFirstName").val("");
@@ -69,14 +89,17 @@ function emptyFields() {
 // appends object argument data to table
 function appendToTable (object) {
     $('tbody').append(`
-    <tr>
+    <tr style="display:none" class="entry";>
     <td>${object.firstName}</td>
     <td>${object.lastName}</td>
     <td class="id">${object.id}</td>
     <td>${object.title}</td>
     <td class="salary">${accounting.formatMoney(object.annualSalary)}</td>
     <td class="button-container"><button type="button" class="deleteButton">Delete</button></td>
-    </tr>`)
+    </tr>`);
+    let newEntry = $(".entry").last(); // targets last added employee row in table, which is hidden
+    newEntry.fadeIn(1000, function() { // gives the employee a fadeIn graphic
+    });
 }
 
 // calculates monthly consts from array argument
@@ -97,7 +120,9 @@ function calculateMonthlyCosts (array) {
 function removeFromTable () {
     let id = Number($(this).parent().siblings(".id").text());
     console.log(id);
-    $(this).closest('tr').remove();
+    $(this).closest('tr').fadeOut(1000, function() {
+        $(this).closest('tr').remove();
+    });
     removeEmployeeFromArray(id);
     calculateMonthlyCosts(employees);
 }

@@ -40,4 +40,4 @@ If you have any questions, feel free to email me at [bakerpj1992@gmail.com](www.
     7. create more interesting animations on employee addition using jquery
     8. add more color to page
     9. Have input and submit button turn red if the regex registers faulty inputs.
-    10. Have table rows fade in on addition and fade out on deletion
+ [x]10. Have table rows fade in on addition and fade out on deletion
