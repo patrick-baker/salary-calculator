@@ -40,6 +40,10 @@ h3 {
     margin: 10px;
 }
 
+.flex-field h4 {
+    text-align: center;
+}
+
 #submit-container {
     display: flex;
     flex-direction: row-reverse;
