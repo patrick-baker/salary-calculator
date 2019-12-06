@@ -12,6 +12,8 @@ Once added, the employees data will update the monthly salary data of the compan
 
 Pressing the delete button on an employee's line will remove that employee from the table, and recalculate the total monthly earnings with the updated employee database.
 
+See the deployed version [here](https://confident-bhabha-2f84bc.netlify.com/)
+
 ## Usage
 
 1. Update employee database by adding all missing employees using input fields.
@@ -38,6 +40,6 @@ If you have any questions, feel free to email me at [bakerpj1992@gmail.com](www.
 [x] 5. Forbid the use of symbols in any input box
 [x] 6. require id and salary inputs to be numbers
 [x] 7. create more interesting animations on employee addition using jquery
-    8. add more color to page - Change shade of rows on hover, 
-    9. Have input and submit button turn red if the regex registers faulty inputs.
+[ ] 8. add more color to page - Change shade of rows on hover, 
+[ ] 9. Have input and submit button turn red if the regex registers faulty inputs.
 [x]10. Have table rows fade in on addition and fade out on deletion
