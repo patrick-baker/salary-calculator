@@ -14,6 +14,8 @@ Pressing the delete button on an employee's line will remove that employee from 
 
 See the deployed version [here](https://confident-bhabha-2f84bc.netlify.com/)
 
+This project was my first weekend project at Prime Digital Academy, employing jquery and purely front-end code.
+
 ## Usage
 
 1. Update employee database by adding all missing employees using input fields.
