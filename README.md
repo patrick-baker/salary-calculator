@@ -12,9 +12,9 @@ Once added, the employees data will update the monthly salary data of the compan
 
 Pressing the delete button on an employee's line will remove that employee from the table, and recalculate the total monthly earnings with the updated employee database.
 
-See the deployed version [here](https://confident-bhabha-2f84bc.netlify.com/)
-
 This project was my first weekend project at Prime Digital Academy, employing jquery and purely front-end code.
+
+See the deployed version [here](https://confident-bhabha-2f84bc.netlify.com/).
 
 ## Usage
 
